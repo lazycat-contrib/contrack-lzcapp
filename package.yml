@@ -1,0 +1,18 @@
+package: community.lazycat.app.contrack
+version: 2.0.0
+name: Contrack 联系人管家
+description: 自托管联系人管理，支持名片追踪与在线信息补全
+min_os_version: 1.5.0
+homepage: https://github.com/arvarik/contrack
+author: arvarik
+license: AGPL-3.0
+locales:
+  zh:
+    name: Contrack 联系人管家
+    description: 自托管联系人管理，支持名片追踪与在线信息补全
+  zh_CN:
+    name: Contrack 联系人管家
+    description: 自托管联系人管理，支持名片追踪与在线信息补全
+  en:
+    name: Contrack
+    description: Self-hosted contact management with tracking and online enrichment

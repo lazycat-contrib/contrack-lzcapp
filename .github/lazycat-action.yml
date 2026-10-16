@@ -1,0 +1,40 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: .lazycat-build/contrack.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: contrack
+
+images:
+  - id: contrack
+    target: service
+    service: contrack
+    source: ghcr.io/arvarik/contrack
+    channel: stable
+    sort: semver
+    tag_regex: ^[0-9]+\.[0-9]+\.[0-9]+$
+    delivery:
+      mode: mirror
+      image_template: "ghcr.1ms.run/arvarik/contrack:{tag}"
+      require_digest_match: true
+
+stores:
+  official:
+    enabled: false
+    skip_if_version_exists: false
+    retry:
+      enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Contrack 联系人管家
+    summary: 镜像加速模式自动跟上游 GHCR 版本发布的自托管联系人管理

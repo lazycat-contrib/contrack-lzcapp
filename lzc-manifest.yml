@@ -1,0 +1,18 @@
+application:
+  subdomain: contrack
+  public_path:
+    - /
+  upstreams:
+    - location: /
+      backend: http://contrack:3210/
+
+services:
+  contrack:
+    # ghcr.io/arvarik/contrack:2.0.0
+    image: ghcr.1ms.run/arvarik/contrack:2.0.0
+    environment:
+      - AUTH_REQUIRED=true
+      - TRUST_PROXY_HOPS=1
+      - CONTRACK_SECRET_KEY={{ stable_secret "contrack_secret_key" }}
+    binds:
+      - /lzcapp/var/data:/app/data
