@@ -5,10 +5,10 @@ application:
   upstreams:
     - location: /
       backend: http://contrack:3210/
-
 services:
   contrack:
     # ghcr.io/arvarik/contrack:2.0.0
+    # upstream: ghcr.io/arvarik/contrack:2.0.0
     image: ghcr.1ms.run/arvarik/contrack:2.0.0
     environment:
       - AUTH_REQUIRED=true
