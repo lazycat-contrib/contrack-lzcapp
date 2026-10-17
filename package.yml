@@ -1,5 +1,5 @@
 package: community.lazycat.app.contrack
-version: 2.0.0
+version: 2.0.1
 name: Contrack
 description: Self-hosted contact management with tracking and online enrichment
 min_os_version: 1.5.0
