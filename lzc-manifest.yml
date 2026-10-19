@@ -8,8 +8,8 @@ application:
 services:
   contrack:
     # ghcr.io/arvarik/contrack:2.0.0
-    # upstream: ghcr.io/arvarik/contrack:2.0.1
-    image: ghcr.1ms.run/arvarik/contrack:2.0.1
+    # upstream: ghcr.io/arvarik/contrack:2.0.2
+    image: ghcr.1ms.run/arvarik/contrack:2.0.2
     environment:
       - AUTH_REQUIRED=true
       - TRUST_PROXY_HOPS=1
